@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/4b12aae445.js"></script>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="dist/css/style.css" />
+  <title>Todo</title>
+</head>
+
+<body>
+  <div id="main-card" class="card-top">
+    <h1 id="card-text">All Fields Required!</h1>
+  </div>
+  <main class="main conatiner">
+    <section class="model-top sure">
+      <div class="sure-inner">
+        <div></div>
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/pics-427c1.appspot.com/o/exclamation-circle.png?alt=media&token=d6bb4558-f0ef-4140-911d-cf7bb766fc7e"
+          alt="icon" class="ex-mark" />
+        <div class="text-hold">
+          <span class="sure-text s-text">Are You Sure?</span>
+          <span class="disclamer s-text">You won't be able to revert this!</span>
+        </div>
+        <div class="main-btns">
+          <button id="del-btn" class="sure-btn s-btn">Yes, delete!</button><button id="cancel-btn"
+            class="sure-btn c-btn">cancel</button>
+        </div>
+      </div>
+    </section>
+    <section class="open-area">
+      <h1 class="open-head">
+        <button id="open-open-btn" class="open-btn-open btn">
+          <i id="left-arrow" class="fa fa-long-arrow-alt-left bm-left"></i>Back
+        </button>
+      </h1>
+      <h4 class="open-description"></h4>
+      <p class="open-text-data"></p>
+      <p class="open-btns">
+        <button id="open-edit" class="open-item-edit-btn btn">Edit</button>
+        <button id="open-remove" class="open-item-remove-btn btn">
+          Remove
+        </button>
+      </p>
+    </section>
+    <section id="showcase-area" class="showcase">
+      <div class="add-area">
+        <input type="text" id="search" class="search input" placeholder="Search" />
+        <input type="text" class="text-name input" placeholder="Title" />
+        <input type="text" class="text-des input" placeholder="Description" />
+      </div>
+      <div class="getter-text">
+        <textarea name="main-text-area" class="input text-data" placeholder="Write here..."></textarea>
+      </div>
+      <p class="add-btn-top">
+        <button id="add-main" class="add-btn btn">Keep</button>
+      </p>
+      <div id="items-container" class="hold-area">
+        <!-- <div class="item">
+            <h2 class="item-title">School Work From Home<button id="open-btn" class="btn-open btn">OPEN<i id = "right-arrow" class="fa fa-long-arrow-alt-right bm-right"></i></button>
+            </h2>
+            <h4 class="item-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro,vitae.
+            </h4>
+            <p class="item-main-text">
+              shams shams shams shams shams shams shams shams shams shams shams shams shams shams shams shams shams shams shams shams shams shams sham...
+
+            </p>
+            <div class="btns">
+                <button id = "edit" class="item-edit-btn btn">Edit</button>
+                <button id = "remove"" class="item-remove-btn btn">Remove</button>
+                <button class="more-text" id="more-plus">+ More</button>
+            </div>
+        </div> -->
+      </div>
+    </section>
+  </main>
+  <footer></footer>
+  <script src="dist/js/jquery.js"></script>
+  <script src="dist/js/app.js"></script>
+</body>
+
+</html>

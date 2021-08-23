@@ -1,0 +1,472 @@
+$pm-clr: #141a46;
+$sc-clr: #e7926a;
+$bd-clr: #c1c1c1;
+
+.card-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15rem;
+  height: 6rem;
+  color: $pm-clr;
+  font-size: 0.6rem;
+  font-family: "Montserrat";
+  border: #141a46 4px solid;
+  box-shadow: 5px 5px 5px #e7926a;
+  background: #ffffff;
+  opacity: 0;
+  transform: translateY(110px);
+  transition: all 0.7s ease;
+  z-index: 99;
+}
+
+.sure {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  visibility: hidden;
+  transition: all 0.3s linear;
+
+  .sure-inner {
+    background: rgb(248, 248, 248);
+    width: 25rem;
+    height: 17rem;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: scale(0);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.29, 0.29, 0.06, 1.47);
+  }
+
+  .ex-mark {
+    width: 6rem;
+  }
+
+  .sure-text {
+    font-weight: bold;
+    font-size: 1.8rem;
+  }
+
+  .s-text {
+    color: #595959;
+    display: block;
+    text-align: center;
+  }
+
+  .disclamer {
+    font-size: 1rem;
+    margin-top: 0.4rem;
+  }
+
+  .main-btns {
+    margin-bottom: 0.5rem;
+  }
+
+  .s-btn {
+    background: #db3236;
+    color: #fff;
+    margin-right: 1rem;
+  }
+
+  .c-btn {
+    background: #3085d6;
+    color: #fff;
+    margin-left: 1rem;
+  }
+
+  .sure-btn {
+    font-family: inherit;
+    border: none;
+    padding: 0.6rem 1.3rem;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Proxima Nova";
+  line-height: 1.3;
+}
+
+.conatiner {
+  padding: 2rem;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  border-radius: 12px;
+  width: 90%;
+  margin: auto;
+}
+.input {
+  border: 1px solid $bd-clr;
+  border-radius: 6px;
+  padding: 12px 15px;
+  font-family: inherit;
+  font-size: 1.2rem;
+  outline: none;
+  transition: 0.08s all linear;
+
+  &:first-child:not(&:last-child) {
+    margin-bottom: 1.5rem;
+    margin-top: -0.5rem;
+    border: none;
+    border-bottom: 1px solid $bd-clr;
+    border-radius: 0;
+    padding: 10px 13px;
+  }
+
+  &:focus {
+    outline: 3px $pm-clr solid;
+    -moz-outline-radius: 8px;
+    outline-offset: 1px;
+    border: none;
+    border-radius: 0;
+    box-shadow: 5px 5px 5px $sc-clr;
+  }
+}
+
+.main {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.add-area {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  grid-gap: 1rem;
+  .search {
+    grid-column: 1 / -1;
+  }
+  .text-name {
+    grid-column: 1/ 3;
+  }
+  .text-des {
+    grid-column: 3/ -1;
+  }
+}
+
+.getter-text {
+  margin-top: 1rem;
+  .text-data {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 0.1rem;
+    height: 9rem;
+  }
+}
+
+.btn {
+  border: none;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-family: inherit;
+  letter-spacing: 0.2px;
+  font-size: 0.95rem;
+  outline: none;
+  border-radius: 5px;
+}
+
+.add-btn-top {
+  width: 100%;
+  text-align: end;
+  .add-btn {
+    margin-right: 5px;
+    background: $pm-clr;
+    color: #ffffff;
+    width: 6rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    &:hover {
+      background-color: lighten($pm-clr, 8);
+    }
+  }
+}
+
+.item-edit-style {
+  background: $pm-clr;
+  color: #ffffff;
+
+  &:hover {
+    background-color: lighten($pm-clr, 8);
+  }
+}
+.item-remove-style {
+  background: #d33336;
+  color: rgb(253, 253, 253);
+  margin-left: 0.4rem;
+  &:hover {
+    background-color: lighten(#d33336, 6);
+  }
+}
+
+.btn-open-style {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  font-size: 1rem;
+  color: $pm-clr;
+  transition: 0.2s all ease;
+  outline: none;
+}
+
+.btn-border-style {
+  &:after {
+    content: "";
+    height: 2px;
+    width: 0;
+    position: absolute;
+    background: #141a46;
+    bottom: 0;
+    transition: 0.2s all ease;
+  }
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+.hold-area {
+  .item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 1px $bd-clr solid;
+    padding: 1rem;
+    border-radius: 6px;
+    margin: 1rem 0;
+
+    .item-title {
+      margin-bottom: 0.4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .btn-open {
+        @extend .btn-open-style;
+        @extend .btn-border-style;
+        margin-left: 0.7rem;
+        .bm-right {
+          margin-left: 5px;
+          font-size: 1.3rem;
+          transition: 0.1s all linear;
+        }
+        &:after {
+          left: 1px;
+        }
+      }
+    }
+
+    .item-description {
+      margin-bottom: 2px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: rgb(29, 29, 29);
+    }
+
+    .item-main-text {
+      font-size: 0.9rem;
+      color: rgb(75, 75, 75);
+    }
+
+    .btns {
+      align-self: flex-end;
+      .item-edit-btn {
+        @extend .item-edit-style;
+      }
+      .item-remove-btn {
+        @extend .item-remove-style;
+      }
+
+      .more-text {
+        @extend .btn-border-style;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        background: none;
+        color: $pm-clr;
+        font-weight: bold;
+        font-size: 1.05rem;
+        position: absolute;
+        bottom: 1.5rem;
+        left: 1rem;
+        padding: 0;
+
+        &:after {
+          left: 1px;
+        }
+      }
+    }
+  }
+}
+
+.open-area {
+  display: none;
+  .open-head {
+    font-size: 1.8rem;
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    .open-btn-open {
+      @extend .btn-open-style;
+      @extend .btn-border-style;
+      margin-left: 0.7rem;
+
+      .bm-left {
+        margin-right: 5px;
+        font-size: 1.3rem;
+        transition: 0.1s all linear;
+      }
+
+      &:after {
+        right: 1px;
+      }
+    }
+  }
+  .open-description {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: rgb(27, 27, 27);
+  }
+  .open-text-data {
+    font-size: 0.95rem;
+    text-align: justify;
+    color: rgb(26, 26, 26);
+  }
+  .open-btns {
+    text-align: end;
+    margin-top: 0.9rem;
+    .open-item-edit-btn {
+      @extend .item-edit-style;
+    }
+    .open-item-remove-btn {
+      @extend .item-remove-style;
+    }
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@include mobile {
+  .input {
+    font-size: 1rem;
+    padding: 9.2px 6px;
+  }
+  .btn {
+    padding: 0.4rem 0.8rem;
+  }
+
+  .add-btn-top {
+    .add-btn {
+      width: 5.5rem;
+      padding: 0.56rem 0;
+    }
+  }
+  .add-area {
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 0.6rem;
+
+    .text-name,
+    .text-des {
+      grid-column: 1/ -1;
+    }
+  }
+  .hold-area {
+    .item {
+      .item-title {
+        font-size: 1.4rem;
+        margin-bottom: 0;
+      }
+      .item-description {
+        font-size: 1rem;
+      }
+      .item-main-text {
+        font-size: 0.85rem;
+      }
+
+      .btns {
+        .more-text {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  .getter-text {
+    margin-top: 0.6rem;
+  }
+
+  .open-area {
+    .open-head {
+      font-size: 1.5rem;
+    }
+    .open-description {
+      font-size: 1rem;
+    }
+    .open-text-data {
+      font-size: 0.88rem;
+    }
+  }
+
+  .sure {
+    .sure-inner {
+      width: 20rem;
+      height: 14rem;
+    }
+
+    .sure-text {
+      font-size: 1.6rem;
+    }
+
+    .disclamer {
+      font-size: 1rem;
+    }
+
+    .ex-mark {
+      width: 4.2rem;
+    }
+
+    .sure-btn {
+      padding: 0.5rem 1.1rem;
+      font-size: 1rem;
+    }
+  }
+
+  .card-top {
+    top: 10px;
+    height: 4rem;
+    transform: translateY(-110px);
+  }
+}
