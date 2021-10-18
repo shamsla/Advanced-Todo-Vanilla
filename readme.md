@@ -1,1 +1,1 @@
-# Advanced Todo App With Sass & JavaScript
+### Advanced Todo App With Vanilla JavaScript
